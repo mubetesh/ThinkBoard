@@ -2,7 +2,7 @@ import { Delete, DeleteIcon, LucideDelete, PenSquareIcon } from "lucide-react";
 import React from "react";
 
 import { Link } from "react-router";
-import NoteDelete from "../pages/NoteDelete";
+import NoteDelete from "../pages/note/NoteDelete";
 import {formatDate} from '../lib/utils'
 
 const NoteCard = ({ note, onDeleted }) => {

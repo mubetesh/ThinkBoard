@@ -1,5 +1,6 @@
 import express from 'express';
 import notesRoutes from './routes/notesRoutes.js';
+import usersRoutes from './routes/usersRoutes.js';
 import connectDB from './config/db.js';
 import dotenv from 'dotenv';
 import rateLimiter from './middleware/ratelimiter.js';
@@ -20,6 +21,7 @@ connectDB();
 
 // Routes
 app.use("/api/notes", notesRoutes);
+app.use("/api/users", usersRoutes);
 
 //
 app.listen(PORT, () => {

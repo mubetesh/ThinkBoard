@@ -1,9 +1,12 @@
 import React from "react";
-import Homepage from "./pages/Homepage";
-import CreatePage from "./pages/CreatePage";
-import NoteDetailPage from "./pages/NoteDetailPage";
+import UserList from "./pages/user/UserList";
 import { Routes, Route } from "react-router";
+import Homepage from "./pages/HomePage";
+import CreateNotePage from "./pages/note/CreateNotePage";
+import NoteDetailPage from "./pages/note/NoteDetailPage";
+import CreateUser from "./pages/user/CreateUser";
 import Navbar from "./components/Navbar";
+
 
 const App = () => {
   return (
@@ -11,8 +14,10 @@ const App = () => {
       <Navbar />
       <Routes>
         <Route path="/" element={<Homepage />} />
-        <Route path="/create" element={<CreatePage />} />
+        <Route path="/create" element={<CreateNotePage />} />
         <Route path="/note/:id" element={<NoteDetailPage />} />
+        <Route path="/users" element={<UserList />} />
+        <Route path="/users/create" element={<CreateUser />} />
       </Routes>
     </div>
   );
