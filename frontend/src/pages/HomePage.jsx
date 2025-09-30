@@ -6,6 +6,7 @@ import api from "../lib/axios";
 import NotesNotFound from "../components/NotesNotFound";
 import { LoaderIcon } from "lucide-react";
 
+
 const Homepage = () => {
   const [isRateLimited, setIsRateLimited] = useState(false);
   const [notes, setNotes] = useState([]);
