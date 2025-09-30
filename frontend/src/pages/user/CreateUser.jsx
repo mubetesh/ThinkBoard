@@ -11,10 +11,16 @@ const CreateUser = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        try{
         await api.post("/users",{name,sex,age})
         toast("User created Successfully")
         navigate("/users")
     }
+    catch (error) {
+        console.error("Error creating user:", error);
+        toast.error("Failed to create user");
+    }
+  }
 
   return (
     <div className='p-4 max-w-md mx-auto mt-10 p-6 bg-base-200 rounded-lg shadow'>

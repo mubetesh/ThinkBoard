@@ -1,5 +1,4 @@
 import React from "react";
-import axios from "axios";
 import toast from "react-hot-toast";
 import { DeleteIcon } from "lucide-react";
 import api from "../../lib/axios";
@@ -13,6 +12,7 @@ const NoteDelete = ({ noteId, onDeleted }) => {
       if (onDeleted) onDeleted();
     } catch (error) {
       toast.error("Error deleting note.");
+      console.log(error);
     }
   };
 
