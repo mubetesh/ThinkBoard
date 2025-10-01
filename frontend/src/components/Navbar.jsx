@@ -17,6 +17,10 @@ const Navbar = () => {
           </Link>
         </div>
         <div className="navbar-end">
+          <Link to="/users" className="btn btn-outline">
+              <span className="text-lg">Users</span>
+            </Link>
+
           {isUsersPage ? (
             <Link to="/users/create" className="btn btn-outline">
               <PlusIcon />
