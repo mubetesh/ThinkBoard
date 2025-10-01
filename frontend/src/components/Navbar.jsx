@@ -1,12 +1,12 @@
-import { PlusIcon } from 'lucide-react';
-import React from 'react';
-import { Link, useLocation } from 'react-router'; // <- use react-router-dom here
+import { PlusIcon } from "lucide-react";
+import React from "react";
+import { Link, useLocation } from "react-router"; // <- use react-router-dom here
 
 const Navbar = () => {
   const location = useLocation();
 
   // check if current path starts with /users
-  const isUsersPage = location.pathname.startsWith('/users');
+  const isUsersPage = location.pathname.startsWith("/users");
 
   return (
     <header>
@@ -17,9 +17,11 @@ const Navbar = () => {
           </Link>
         </div>
         <div className="navbar-end gap-2">
-          <Link to="/users" className="btn btn-outline">
+          {!isUsersPage && (
+            <Link to="/users" className="btn btn-outline">
               <span className="text-lg">Users</span>
             </Link>
+          )}
 
           {isUsersPage ? (
             <Link to="/users/create" className="btn btn-outline">
