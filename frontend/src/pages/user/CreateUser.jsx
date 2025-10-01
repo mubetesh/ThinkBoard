@@ -22,11 +22,13 @@ const CreateUser = () => {
   };
 
   return (
-    <div className="p-4 max-w-md mx-auto mt-10 p-6 bg-base-200 rounded-lg shadow">
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          value={name}
+    <div>
+      <h1>Create User</h1>
+      <div className="p-4 max-w-md mx-auto mt-10 p-6 bg-base-200 rounded-lg shadow">
+        <form onSubmit={handleSubmit}>
+          <input
+            type="text"
+            value={name}
           onChange={(e) => setName(e.target.value)}
           placeholder="Name"
           className="input input-bordered w-full mb-4"
@@ -52,6 +54,7 @@ const CreateUser = () => {
         </button>
       </form>
     </div>
+  </div>
   );
 };
 

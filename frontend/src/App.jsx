@@ -6,6 +6,7 @@ import CreateNotePage from "./pages/note/CreateNotePage";
 import NoteDetailPage from "./pages/note/NoteDetailPage";
 import CreateUser from "./pages/user/CreateUser";
 import Navbar from "./components/Navbar";
+import UserUpdate from "./pages/user/UserUpdate";
 
 
 const App = () => {
@@ -18,6 +19,7 @@ const App = () => {
         <Route path="/note/:id" element={<NoteDetailPage />} />
         <Route path="/users" element={<UserList />} />
         <Route path="/users/create" element={<CreateUser />} />
+        <Route path="/users/:id" element={<UserUpdate />} />
       </Routes>
     </div>
   );
