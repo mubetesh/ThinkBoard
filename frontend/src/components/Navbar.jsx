@@ -16,7 +16,7 @@ const Navbar = () => {
             ThinkBoard
           </Link>
         </div>
-        <div className="navbar-end">
+        <div className="navbar-end gap-2">
           <Link to="/users" className="btn btn-outline">
               <span className="text-lg">Users</span>
             </Link>
